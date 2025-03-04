@@ -8,13 +8,13 @@
             <th>Age</th>
             <th>Owner</th>
         </tr>
-        {% for row in rows %}
+        {% for pet in pets %}
         <tr>
-            {% for item in row %}
-            <td>{{ item }}</td>
+            {% for key in pet.keys() %}
+            <td>{{ pet[key] }}</td>
             {% endfor %}
-            <td><a href="/delete/{{row[0]}}">Delete</a></td>
-            <td><a href="/update/{{row[0]}}">Update</a></td>
+            <td><a href="/delete/{{pet['id']}}">Delete</a></td>
+            <td><a href="/update/{{pet['id']}}">Update</a></td>
         </tr>
         {% endfor %}
     </table>
