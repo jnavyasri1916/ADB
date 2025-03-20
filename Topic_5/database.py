@@ -1,7 +1,7 @@
 from peewee import *
 
 # Initialize database connection
-db = None
+db = SqliteDatabase('pets.db')
 
 # Define models
 class Kind(Model):
@@ -246,4 +246,4 @@ if __name__ == "__main__":
 #     test_get_pets()
 #     test_get_kinds()
 #     test_create_pet()
-#     print("done.")
+#     print("done.")e
